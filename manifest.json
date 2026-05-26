@@ -1,0 +1,46 @@
+{
+  "name": "work8",
+  "release": "workbuddy-agent-os-v1.0.0-alpha.1",
+  "status": "alpha-accepted",
+  "product": {
+    "entry": "OpenClaw conversation",
+    "home": "Work8 Home",
+    "deliverable": "Work Receipt",
+    "source_of_truth": "openclaw-substrate",
+    "operator_surface": "CLI"
+  },
+  "components": {
+    "workbuddy-native-ingress": {
+      "repository": "https://github.com/BXya/workbuddy-native-ingress",
+      "commit": "95666b7633cb63069e4644b943673a2d222e4c34",
+      "tag": "workbuddy-agent-os-v1.0.0-alpha.1"
+    },
+    "goclaw-stack": {
+      "repository": "https://github.com/BXya/goclaw-stack",
+      "commit": "ec9a7d31aad41e54a70f13ca95bfdc49e5a297b4",
+      "tag": "workbuddy-agent-os-v1.0.0-alpha.1"
+    },
+    "openclaw-substrate": {
+      "repository": "https://github.com/BXya/openclaw-substrate",
+      "commit": "bcc0bf468ac15218b6ba09ae080434ab6d61d162",
+      "tag": "workbuddy-agent-os-v1.0.0-alpha.1"
+    }
+  },
+  "accepted_gates": {
+    "fresh_clone_rehearsal": true,
+    "plugin_doctor": true,
+    "clean_install_gate": true,
+    "quickstart_sample_task": true,
+    "home_url_opened": true,
+    "receipt_opened": true,
+    "real_openclaw_dogfood": true,
+    "health_status_no_side_effect": true
+  },
+  "runtime_urls": {
+    "live_home": "http://127.0.0.1:8790/index.html?data=/api/dashboard",
+    "fresh_clone_home_shape": "http://127.0.0.1:<port>/index.html?data=/runs/latest/dashboard-projection.json"
+  },
+  "known_limitations": [
+    "OpenClaw visible assistant text can still be generic; WorkBuddy hook payload is correct."
+  ]
+}
